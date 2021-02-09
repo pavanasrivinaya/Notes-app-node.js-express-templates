@@ -4,7 +4,8 @@ const fs = require('fs')
 const hbs = require('hbs')
 
 const app = express()
-const PORT = process.env.port || 3000;
+const port = process.env.PORT || 3000;
+
 const publicDirectoryPath = path.join(__dirname, '../public')
 app.use(express.json());
 
@@ -38,6 +39,6 @@ app.post('/setitem', (req, res) => {
 
 })
 
-app.listen(PORT, () => {
-    console.log('Server is up on port:' +3000)
+app.listen(port, () => {
+    console.log('Server is up on port:' + port)
 }) 
